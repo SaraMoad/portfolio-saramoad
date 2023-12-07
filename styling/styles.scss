@@ -11,6 +11,10 @@ h1 {
         font-size: 64px;
         font-family: Cinzel;
         font-weight: 600;
+            @include media-queries.phone {
+                    padding: 0, 10px, 0, 0;  
+                    font-size: 56px;   
+                }
 }
 
 h2 {
@@ -18,21 +22,32 @@ h2 {
     color: #0E4171;
     padding: 10px;
     font-size: 32px;
+        @include media-queries.phone {
+               padding: 5px, 10px, 5px, 5px;   
+            }
 }
 
 h3 {
     font-family: Cinzel;
     color: #0E4171;
     padding: 10px;
+        @include media-queries.phone {
+                padding: 5px;
+        
+            }
 }
 
 nav {
     @include mixins.flex-display-direction-align(flex, row, center);
     width: 100%;
     justify-content: end;
-        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     position: fixed;
     top: 0;
+    @include media-queries.phone {
+        justify-content: space-between;
+
+    }
 
     & a {
        display: flex;
@@ -42,6 +57,10 @@ nav {
        text-decoration: none;
        font-weight: 200;
        font-size: 24px;
+        @include media-queries.phone {
+                padding: 20px;
+        
+            }
        
        &:visited {
         text-decoration: none;
@@ -58,19 +77,36 @@ nav {
     justify-items: center;
     margin-top: 40px;
     padding-bottom: 20px;
-    width:100%;
+    width: 100%;
     background-color: #8BC6EC;
     background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+        @include media-queries.phone {
+                justify-content: space-between;
+                margin-top: 80px;
+        
+            }
 
     & .logo {
         width: 300px;
         height: 300px;
+            @include media-queries.phone {
+                   width: 50%;
+                   height: 50%;
+                   padding-left:20px;
+            
+                }
     }
     
     
     & .home__h2 {
         @extend h2;
         font-weight: lighter;
+
+            @include media-queries.phone {
+                 font-size: 24px;
+            
+                }
     };
 };
     

@@ -9,6 +9,12 @@ h1 {
   font-family: Cinzel;
   font-weight: 600;
 }
+@media only screen and (max-width: 576px) {
+  h1 {
+    padding: 0, 10px, 0, 0;
+    font-size: 56px;
+  }
+}
 
 h2, #home .home__h2 {
   font-family: Cinzel;
@@ -16,11 +22,21 @@ h2, #home .home__h2 {
   padding: 10px;
   font-size: 32px;
 }
+@media only screen and (max-width: 576px) {
+  h2, #home .home__h2 {
+    padding: 5px, 10px, 5px, 5px;
+  }
+}
 
 h3 {
   font-family: Cinzel;
   color: #0E4171;
   padding: 10px;
+}
+@media only screen and (max-width: 576px) {
+  h3 {
+    padding: 5px;
+  }
 }
 
 nav {
@@ -33,6 +49,11 @@ nav {
   position: fixed;
   top: 0;
 }
+@media only screen and (max-width: 576px) {
+  nav {
+    justify-content: space-between;
+  }
+}
 nav a {
   display: flex;
   padding: 10px;
@@ -41,6 +62,11 @@ nav a {
   text-decoration: none;
   font-weight: 200;
   font-size: 24px;
+}
+@media only screen and (max-width: 576px) {
+  nav a {
+    padding: 20px;
+  }
 }
 nav a:visited {
   text-decoration: none;
@@ -60,12 +86,30 @@ nav a:visited {
   background-color: #8BC6EC;
   background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 }
+@media only screen and (max-width: 576px) {
+  #home {
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+}
 #home .logo {
   width: 300px;
   height: 300px;
 }
+@media only screen and (max-width: 576px) {
+  #home .logo {
+    width: 50%;
+    height: 50%;
+    padding-left: 20px;
+  }
+}
 #home .home__h2 {
   font-weight: lighter;
+}
+@media only screen and (max-width: 576px) {
+  #home .home__h2 {
+    font-size: 24px;
+  }
 }
 
 #skills {
