@@ -1,53 +1,9 @@
 @use "./partials/mixins";
-@use "./modules/media-queries";
+@use "./partials/media-queries";
 
 * {
     font-family: serif;
     margin: 0;   
-};
-
-nav {
-    @include mixins.flex-display-direction-align(flex, row, center);
-    width: 100%;
-    justify-content: end;
-        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-    position: fixed;
-    top: 0;
-};
-
-.nav-bar__links {
-  display: flex;
-};
-
-nav a {
-   display: flex;
-   padding: 10px;
-   margin: 10px;
-   color: #0E4171;
-   text-decoration: none;
-   font-weight: 200;
-   font-size: 24px;
-   
-   &:visited {
-    text-decoration: none;
-    color:#0E4171;
-    font-weight: 200
-   }
-};
-
-.logo {
-    width: 300px;
-    height: 300px;
-}
-
-#home {
-    @include mixins.flex-display-direction-align(flex, row, center);
-    justify-content: space-evenly;
-    margin-top: 40px;
-    width:100%;
-    height: 450px;
-    background-color: #8BC6EC;
-        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 };
 
 h1 {
@@ -60,158 +16,200 @@ h1 {
 h2 {
     font-family: Cinzel;
     color: #0E4171;
-    font-size: 32px;
     padding: 10px;
+    font-size: 32px;
 }
 
 h3 {
     font-family: Cinzel;
     color: #0E4171;
-    font-size: 24px;
     padding: 10px;
 }
-.home__h1 {
-    padding: 10px;
-    font-size: 64px;
-    font-family: Cinzel;
-    font-weight: 600;
 
+nav {
+    @include mixins.flex-display-direction-align(flex, row, center);
+    width: 100%;
+    justify-content: end;
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    position: fixed;
+    top: 0;
+
+    & a {
+       display: flex;
+       padding: 10px;
+       margin: 10px;
+       color: #0E4171;
+       text-decoration: none;
+       font-weight: 200;
+       font-size: 24px;
+       
+       &:visited {
+        text-decoration: none;
+        color:#0E4171;
+        font-weight: 200;
+       }
+    };
 };
 
-.home__h2 {
-    @extend h2;
-    font-weight: lighter;
-};
 
+#home {
+    @include mixins.flex-display-direction-align(flex, row, center);
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    width:100%;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+    & .logo {
+        width: 300px;
+        height: 300px;
+    }
+    
+    
+    & .home__h2 {
+        @extend h2;
+        font-weight: lighter;
+    };
+};
+    
 #skills {
-    padding:10px;
     @include mixins.flex-display-direction-align(flex, column, center);
     justify-content: center;
     width:100%;
-
+    margin-top: 20px;
+    & .skills {        
+            
+        &__card {
+            @include mixins.flex-display-direction-align(flex, row, center);
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            
+            
+            
+            &__items {
+                @include mixins.flex-display-direction-align(flex, row, center);
+                width: 300px;
+                justify-items: center;
+                gap: 10px;
+                padding: 5px;
+                font-size: 30px;
+                
+            }
+        }
+        
+        &__icons {
+            height: 45px;
+            width: 45px;
+        }
+    }
 }
-
-.skills__card {
- @include mixins.flex-display-direction-align(flex, row, center);
- height: 400px;
- justify-content: center;
- flex-wrap: wrap;
- gap: 20px;
- 
-}
-
-.skills__h2 {
-    font-size: 32px;
-}
-
-.skills__icons {
-    height: 45px;
-     width: 45px;
-}
-.skills__card__items {
-    @include mixins.flex-display-direction-align(flex, row, center);
-    width: 300px;
-    justify-items: center;
-    gap: 10px;
-    padding: 5px;
-    font-size: 30px;
-   
-}
-
+    
 #projects {
     background-color: #8BC6EC;
         background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     @include mixins.flex-display-direction-align(flex, column, center);
     flex-wrap: wrap;
-    padding: 20px;
-    // height: 300px;
+    width: 100%;
+    margin-top: 20px;
 
-};
-
-.project__container {
-    @include mixins.flex-display-direction-align(flex, row, center);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px;
-}
-
-.project__card {
-    @include mixins.flex-display-direction-align(flex, column, center);
-    padding: 20px;
-    gap: 20px;
-    margin: 20px;
-    align-items: start;
-    font-size: 20px;
-    flex-wrap: wrap;
-    max-width: 350px;
-}
-
-
-.project__card__icons {
-    @include mixins.flex-display-direction-align(flex, row, center);
-}
-
-.project__links {
-    text-decoration: none;
-    &:visited {
-        text-decoration: none;
+    & .project {
+    
+        &__container {
+            @include mixins.flex-display-direction-align(flex, row, center);
+            justify-content: center;
+            flex-wrap: wrap;
     }
-}
-.project__icons {
-    height: 46px;
-    width: 46px;
+    
+    &__card {
+        @include mixins.flex-display-direction-align(flex, column, center);
+        padding: 20px;
+        gap: 20px;
+        margin: 20px;
+        align-items: start;
+        font-size: 20px;
+        flex-wrap: wrap;
+        max-width: 350px;
 
+        &__icons {
+            @include mixins.flex-display-direction-align(flex, row, center);
+        }
+
+    }
+    
+    &__links {
+        text-decoration: none;
+        &:visited {
+            text-decoration: none;
+        }
+    }
+    &__icons {
+        height: 46px;
+        width: 46px;
+        
+    }  
+    
 }
+};
 
 
 #about-me {
  @include mixins.flex-display-direction-align(flex, row, center);
- margin: 50px;
  justify-content: space-between;
-}
-.about-me__card {
-    @include mixins.flex-display-direction-align(flex, row, center);
-    justify-content: space-between;
-    width: 100%;
-}
+ width: 100%;
+ margin-top: 20px;
 
-.about-me__card__section {
-    @include mixins.flex-display-direction-align(flex, row, center);
-    gap: 40px;
-    justify-content: center;
-}
-.about-me__card p {
-    display: flex;
-    text-align: left;
-    font-size: 24px;
-    max-width: 500px;
-    border-left: 1px solid #0E4171;
-    padding: 20px;
-    color: #0E4171;
-}
+ & .about-me {
+        &__card {
+        @include mixins.flex-display-direction-align(flex, row, center);
+        justify-content: space-between;
+        width: 100%;
+        
+        &__section {
+            margin-left: 15px;
+            @include mixins.flex-display-direction-align(flex, row, center);
+            gap: 40px;
+            justify-content: center;
+        }
 
-.about-me__img {
-    width: 300px;
-    height: 300px;
-}
-
-.about-me__card__contact {
-    @include mixins.flex-display-direction-align(flex, column, center);
-    padding: 20px;
-}
-
-.about-me__card__contact h1 {
-    color:#0E4171;
-}
-.about-me__card__contact a {
-    text-decoration: none;
-&:visited {
-        text-decoration: none;
+        & p {
+            display: flex;
+            text-align: left;
+            font-size: 24px;
+            max-width: 400px;
+            border-left: 1px solid #0E4171;
+            padding: 20px;
+            color: #0E4171;
+        }
+        &__contact {
+            @include mixins.flex-display-direction-align(flex, column, center);
+            margin-right: 15px;
+            & h1 {
+                color:#0E4171;
+            }
+            & a {
+                margin-right: 15px;
+                text-decoration: none;
+                &:visited {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    
+    &__img {
+        width: 300px;
+        height: 300px;
+    }
+    
     }
 }
-
+    
 
 footer {
     width: 100%;
-    margin: 20px;
+    color:#0E4171;
 }
