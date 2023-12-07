@@ -66,6 +66,7 @@ nav a {
 @media only screen and (max-width: 576px) {
   nav a {
     padding: 20px;
+    font-size: 16px;
   }
 }
 nav a:visited {
@@ -81,6 +82,7 @@ nav a:visited {
   justify-content: space-evenly;
   justify-items: center;
   margin-top: 40px;
+  padding-top: 10px;
   padding-bottom: 20px;
   width: 100%;
   background-color: #8BC6EC;
@@ -89,7 +91,7 @@ nav a:visited {
 @media only screen and (max-width: 576px) {
   #home {
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 75px;
   }
 }
 #home .logo {
@@ -190,26 +192,48 @@ nav a:visited {
 
 #about-me {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 1555px) {
+  #about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 #about-me .about-me__card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
+@media only screen and (min-width: 1555px) {
+  #about-me .about-me__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
 #about-me .about-me__card__section {
   margin-left: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 40px;
   justify-content: center;
+}
+@media only screen and (min-width: 1555px) {
+  #about-me .about-me__card__section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 #about-me .about-me__card p {
   display: flex;
@@ -226,15 +250,21 @@ nav a:visited {
   align-items: center;
   margin-right: 15px;
 }
-#about-me .about-me__card__contact h1 {
-  color: #0E4171;
-}
 #about-me .about-me__card__contact a {
   margin-right: 15px;
   text-decoration: none;
 }
 #about-me .about-me__card__contact a:visited {
   text-decoration: none;
+}
+#about-me .about-me__card__contact__h1 {
+  color: #0E4171;
+  font-size: 32px;
+}
+@media only screen and (min-width: 1555px) {
+  #about-me .about-me__card__contact__h1 {
+    font-size: 64px;
+  }
 }
 #about-me .about-me__img {
   width: 300px;
