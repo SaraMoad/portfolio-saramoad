@@ -3,6 +3,26 @@
   margin: 0;
 }
 
+h1 {
+  padding: 10px;
+  font-size: 64px;
+  font-family: Cinzel;
+  font-weight: 600;
+}
+
+h2, #home .home__h2 {
+  font-family: Cinzel;
+  color: #0E4171;
+  padding: 10px;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: Cinzel;
+  color: #0E4171;
+  padding: 10px;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -13,11 +33,6 @@ nav {
   position: fixed;
   top: 0;
 }
-
-.nav-bar__links {
-  display: flex;
-}
-
 nav a {
   display: flex;
   padding: 10px;
@@ -33,84 +48,43 @@ nav a:visited {
   font-weight: 200;
 }
 
-.logo {
-  width: 300px;
-  height: 300px;
-}
-
 #home {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  justify-items: center;
   margin-top: 40px;
+  padding-bottom: 20px;
   width: 100%;
-  height: 450px;
   background-color: #8BC6EC;
   background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 }
-
-h1 {
-  padding: 10px;
-  font-size: 64px;
-  font-family: Cinzel;
-  font-weight: 600;
+#home .logo {
+  width: 300px;
+  height: 300px;
 }
-
-h2, .home__h2 {
-  font-family: Cinzel;
-  color: #0E4171;
-  font-size: 32px;
-  padding: 10px;
-}
-
-h3 {
-  font-family: Cinzel;
-  color: #0E4171;
-  font-size: 24px;
-  padding: 10px;
-}
-
-.home__h1 {
-  padding: 10px;
-  font-size: 64px;
-  font-family: Cinzel;
-  font-weight: 600;
-}
-
-.home__h2 {
+#home .home__h2 {
   font-weight: lighter;
 }
 
 #skills {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 20px;
 }
-
-.skills__card {
+#skills .skills__card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 400px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
-
-.skills__h2 {
-  font-size: 32px;
-}
-
-.skills__icons {
-  height: 45px;
-  width: 45px;
-}
-
-.skills__card__items {
+#skills .skills__card__items {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -120,6 +94,10 @@ h3 {
   padding: 5px;
   font-size: 30px;
 }
+#skills .skills__icons {
+  height: 45px;
+  width: 45px;
+}
 
 #projects {
   background-color: #8BC6EC;
@@ -128,19 +106,17 @@ h3 {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
-
-.project__container {
+#projects .project__container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px;
 }
-
-.project__card {
+#projects .project__card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,21 +128,18 @@ h3 {
   flex-wrap: wrap;
   max-width: 350px;
 }
-
-.project__card__icons {
+#projects .project__card__icons {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
-.project__links {
+#projects .project__links {
   text-decoration: none;
 }
-.project__links:visited {
+#projects .project__links:visited {
   text-decoration: none;
 }
-
-.project__icons {
+#projects .project__icons {
   height: 46px;
   width: 46px;
 }
@@ -175,60 +148,56 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 50px;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
 }
-
-.about-me__card {
+#about-me .about-me__card {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-
-.about-me__card__section {
+#about-me .about-me__card__section {
+  margin-left: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 40px;
   justify-content: center;
 }
-
-.about-me__card p {
+#about-me .about-me__card p {
   display: flex;
   text-align: left;
   font-size: 24px;
-  max-width: 500px;
+  max-width: 400px;
   border-left: 1px solid #0E4171;
   padding: 20px;
   color: #0E4171;
 }
-
-.about-me__img {
+#about-me .about-me__card__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+}
+#about-me .about-me__card__contact h1 {
+  color: #0E4171;
+}
+#about-me .about-me__card__contact a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+#about-me .about-me__card__contact a:visited {
+  text-decoration: none;
+}
+#about-me .about-me__img {
   width: 300px;
   height: 300px;
 }
 
-.about-me__card__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.about-me__card__contact h1 {
-  color: #0E4171;
-}
-
-.about-me__card__contact a {
-  text-decoration: none;
-}
-.about-me__card__contact a:visited {
-  text-decoration: none;
-}
-
 footer {
   width: 100%;
-  margin: 20px;
+  color: #0E4171;
 }
