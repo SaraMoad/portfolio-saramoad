@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styling/styles.css">      
+    <link rel="stylesheet" href="./styling/styles.css">   
+    <link rel="icon" href="./images/SM_Logo_white.png" type="png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Sara Moad</title>
 </head>
 <body>
     <nav>
-        <div class="nav-bar__links">
-            <a href="#home"><p>Home</p></a>
-            <a href="#skills"><p>Skills</p></a>
-            <a href="#projects"><p>Projects</p></a>
-            <a href="#about-me"><p>About Me</p></a>
-            <a href="#about-me"><p>Contact</p></a>
-        </div>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#about-me">About Me</a>
+            <a href="#about-me">Contact</a>
     </nav>
     <section id="home"> 
-        <img src="http://placekitten.com/g/200/300" alt="hero image">
-        <h1 class="home__h1"> Sara Moad</h1>
-        <h2> Junior Full-Stack Developer</h2>
+        <div>
+            <img class="logo" src="./images/SM_Logo_bigger.png" alt="Sara Moad's logo">
+        </div>
+        <div>
+            <h1 class="home__h1"> Sara Moad</h1>
+            <h2 class="home__h2"> Junior Full-Stack Developer</h2>
+        </div>
     </section> 
   
     <section id="skills">
+        <h2 class="skills__h2">Experienced in</h2>
         <div class="skills__card">
-            <h2>Experienced in</h2>
             <div class="skills__card__items">
                 <img src="/images/icons/icons8-html5-48.png" alt="HTML5 logo">
                 <p>HTML5</p>
             </div>
-            <div>
+            <div class="skills__card__items">
                 <img src="./images/icons/icons8-css-48.png" alt="CSS logo">
-                <p>CSS</p>
+                <p>CSS 3</p>
             </div>
             <div  class="skills__card__items">
                 <img src="./images/icons/icons8-sass-48.png" alt="SASS logo">
@@ -40,6 +48,14 @@
             <div class="skills__card__items">
                 <img src="./images/icons/icons8-javascript-48.png" alt="javascript logo">
                 <p>Javascript</p>
+            </div>
+            <div class="skills__card__items">
+                <img class="skills__icons"src="./images/icons/nestjs.256x255.png" alt="nest.js logo">
+                <p>Nest.js</p>
+            </div>
+            <div class="skills__card__items">
+                <img class="skills__icons" src="./images/icons/next-js.256x256.png" alt="next.js logo">
+                <p>Next.js</p>
             </div>
             <div class="skills__card__items">
                 <img src="./images/icons/icons8-typescript-48.png" alt="Typescript logo">
@@ -71,11 +87,15 @@
             </div>
             <div class="skills__card__items">
                 <img src="./images/icons/icons8-mongodb-48.png" alt="MongoDb logo">
-                <p>MongoDb</p>
+                <p>MongoDB</p>
             </div>
             <div class="skills__card__items">
                 <img src="./images/icons/icons8-spring-boot-48.png" alt="SpringBoot logo">
                 <p>SpringBoot</p>
+            </div>
+            <div class="skills__card__items">
+                <img src="./images/icons/icons8-google-48.png" alt="google logo">
+                <p>FireBase & Firestore</p>
             </div>
             <div class="skills__card__items">
                <img src="./images/icons/icons8-figma-48.png" alt="figma logo">
@@ -84,53 +104,123 @@
         </div>
   </section>
   <section id="projects">
-      <h1>Recent Works</h1>
-      <div class="project__card">
-          <h3>Sara Moad- Portfolio</h3>
-          <p> I developed this portfolio with SCSS and HTML 5</p>
-              <a class="project__links" target="_blank" href="">
-                  <img class="project__icons" src="./images/icons/icons8-world-50.png" alt="website icon">
-              </a>
-              <a class="project__links" target="_blank" href="https://github.com/SaraMoad/portfolio-saramoad">
-                <img src="./images/icons/icons8-github-48.png" alt="Github logo">
-              </a>
-      </div>
+      <h2>Recent Works</h2>
+      <div class="project__container">
 
-      <div class="project__card">
-          <h3>Robofriends</h3>
-          <p> I developed this responsive front-end application with React, HTML 5, Javascript and CSS.</p>
-          <a class="project__links" target="_blank" href="https://saramoad.github.io/RoboFriends">
-              <img class="project__icons"src="./images/icons/icons8-world-50.png" alt="website icon">
-          </a>
-          <a  class="project__links" target="_blank" href="https://github.com/SaraMoad/RoboFriends">
-              <img src="./images/icons/icons8-github-48.png" alt="Github logo">
-           </a>
+          <div class="project__card">
+              <h3>Sara Moad- Portfolio</h3>
+              <img class="project__card__img" src="http://placekitten.com/g/300/200" alt="placeholder-kitten">
+              <p> I developed this portfolio with SCSS and HTML 5</p>
+            <div class="project__card__icons">
+                <a class="project__links" target="_blank" href="">
+                    <img class="project__icons" src="./images/icons/icons8-world-50.png" alt="website icon">
+                </a>
+                <a class="project__links" target="_blank" href="https://github.com/SaraMoad/portfolio-saramoad">
+                    <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+                </a>
+            </div>
+        </div>
+        
+        <div class="project__card">
+            <h3>Robofriends</h3>
+            <img class="project__card__img" src="http://placekitten.com/g/300/200" alt="placeholder-kitten">
+            <p> I developed this responsive front-end application with React, HTML 5, Javascript and CSS.</p>
+            <div class="project__card__icons">
+                <a class="project__links" target="_blank" href="https://saramoad.github.io/RoboFriends">
+                    <img class="project__icons"src="./images/icons/icons8-world-50.png" alt="website icon">
+                </a>
+                <a  class="project__links" target="_blank" href="https://github.com/SaraMoad/RoboFriends">
+                    <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+                </a>
+            </div>
       </div>
-  </section>
-    <section id ="about-me">
-        <div class="about-me__card">
-            <div class="about-me__card__section">
-                <img class="about-me__img" src="./images/profile-picture-sara.png" alt="Sara Moad smiling">
-                <p>   
-                    I was able to enjoy creative pursuits in my previous roles as a professional dancer and a teacher of dance which enabled
-                    me to explore that magic and creativity in a variety of situations with both children and adults. I have enjoyed applying 
-                    this same creativity to my work in development to create intuitive applications. You'll also find me applying this on weeknights
-                    to my characters as I play Dungeons and Dragons. 
+      <div class="project__card">
+          <h3>Placeholder</h3>
+          <img class="project__card__img" src="http://placekitten.com/g/300/200" alt="placeholder-kitten">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="project__card__icons">
+        <a class="project__links" target="_blank" href="">
+            <img class="project__icons" src="./images/icons/icons8-world-50.png" alt="website icon">
+        </a>
+        <a class="project__links" target="_blank" href="https://github.com/SaraMoad/portfolio-saramoad">
+            <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+        </a>
+    </div>
+</div>
+<div class="project__card">
+    <h3>Placeholder</h3>
+    <img class="project__card__img" src="http://placekitten.com/g/300/200" alt="placeholder-kitten">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="project__card__icons"> 
+        
+        <a class="project__links" target="_blank" href="">
+            <img class="project__icons" src="./images/icons/icons8-world-50.png" alt="website icon">
+        </a>
+        <a class="project__links" target="_blank" href="https://github.com/SaraMoad/portfolio-saramoad">
+            <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+        </a>
+    </div>
+</div>
+<div class="project__card">
+    <h3>Placeholder</h3>
+    <img class="project__card__img" src="http://placekitten.com/g/300/200" alt="placeholder-kitten">
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+    <div class="project__card__icons">
+        <a class="project__links" target="_blank" href="">
+                <img class="project__icons" src="./images/icons/icons8-world-50.png" alt="website icon">
+            </a>
+            <a class="project__links" target="_blank" href="https://github.com/SaraMoad/portfolio-saramoad">
+                <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+            </a>
+        </div>
+    </div>
+    <div class="project__card">
+        <h3>Placeholder</h3>
+        <img class="project__card__img" src="http://placekitten.com/g/300/200" alt="placeholder-kitten">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="project__card__icons">
+            <a class="project__links" target="_blank" href="">
+                <img class="project__icons" src="./images/icons/icons8-world-50.png" alt="website icon">
+            </a>
+            <a class="project__links" target="_blank" href="https://github.com/SaraMoad/portfolio-saramoad">
+            <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+        </a>
+    </div>
+    </div>
+</div>
+</section>
+<section id ="about-me">
+    <div class="about-me__card">
+        <div class="about-me__card__section">
+            <img class="about-me__img" src="./images/profile-picture-sara.png" alt="Sara Moad smiling">
+            <h2>Nice to meet you!</h2>
+            <p>   
+                I was able to enjoy creative pursuits in my previous roles as a professional dancer and a teacher of dance which enabled
+                me to explore that magic and creativity in a variety of situations with both children and adults. 
+                <br> 
+                <br>
+                I have enjoyed applying this same creativity to my work in development to create intuitive applications. 
+                You'll also find me applying this on weeknights as I go on adventures as my characters while I play Dungeons and Dragons. 
                 </p>
             </div>
             <div class="about-me__card__contact">
-                <h2>Let's Chat</h2>
-            <a target="_blank" href="https://github.com/SaraMoad/">
-                <img src="./images/icons/icons8-github-48.png" alt="Github logo">
-            </a>
-            <a target="_blank">
-                <img src="./images/icons/icons8-linked-in-48.png" alt="linkedin logo">
-            </a>
-            <a href="mailto:saramoad95@gmail.com">
-                <img src="./images/icons/icons8-email-48.png" alt="">
-            </a>
+                <h1>Let's Chat</h1>
+            <div>
+                <a target="_blank" href="https://github.com/SaraMoad/">
+                    <img src="./images/icons/icons8-github-48.png" alt="Github logo">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/sara-moad-39b3b3255/">
+                    <img src="./images/icons/icons8-linked-in-48.png" alt="linkedin logo">
+                </a>
+                <a href="mailto:saramoad95@gmail.com">
+                    <img src="./images/icons/icons8-email-48.png" alt="">
+                </a>
+            </div>
             </div>
         </div>
           </section>
+          <footer>
+            <p> Created by Sara Moad using HTML and SASS.</p>
+          </footer>
 </body>
 </html>
