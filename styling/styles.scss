@@ -46,7 +46,6 @@ nav {
     top: 0;
     @include media-queries.phone {
         justify-content: space-between;
-
     }
 
     & a {
@@ -59,7 +58,7 @@ nav {
        font-size: 24px;
         @include media-queries.phone {
                 padding: 20px;
-        
+                font-size: 16px;       
             }
        
        &:visited {
@@ -76,6 +75,7 @@ nav {
     justify-content: space-evenly;
     justify-items: center;
     margin-top: 40px;
+    padding-top: 10px;
     padding-bottom: 20px;
     width: 100%;
     background-color: #8BC6EC;
@@ -83,7 +83,7 @@ nav {
 
         @include media-queries.phone {
                 justify-content: space-between;
-                margin-top: 80px;
+                margin-top: 75px;
         
             }
 
@@ -192,22 +192,33 @@ nav {
 
 
 #about-me {
- @include mixins.flex-display-direction-align(flex, row, center);
+ @include mixins.flex-display-direction-align(flex, column, center);
  justify-content: space-between;
  width: 100%;
  margin-top: 20px;
+ margin-bottom: 20px;
+    @include media-queries.xxlDesktop {
+             @include mixins.flex-display-direction-align(flex, row, center);
+         }
+    
 
  & .about-me {
         &__card {
-        @include mixins.flex-display-direction-align(flex, row, center);
+        @include mixins.flex-display-direction-align(flex, column, center);
         justify-content: space-between;
         width: 100%;
+        @include media-queries.xxlDesktop {
+                @include mixins.flex-display-direction-align(flex, row, center);
+        }
         
         &__section {
             margin-left: 15px;
-            @include mixins.flex-display-direction-align(flex, row, center);
+            @include mixins.flex-display-direction-align(flex, column, center);
             gap: 40px;
             justify-content: center;
+            @include media-queries.xxlDesktop {
+                @include mixins.flex-display-direction-align(flex, row, center);
+             }
         }
 
         & p {
@@ -219,18 +230,23 @@ nav {
             padding: 20px;
             color: #0E4171;
         }
+
         &__contact {
             @include mixins.flex-display-direction-align(flex, column, center);
             margin-right: 15px;
-            & h1 {
-                color:#0E4171;
-            }
             & a {
                 margin-right: 15px;
                 text-decoration: none;
                 &:visited {
                     text-decoration: none;
                 }
+            }
+            &__h1 {
+                color:#0E4171;
+                font-size: 32px;
+                @include media-queries.xxlDesktop {
+                       font-size: 64px;
+                    }
             }
         }
     }
