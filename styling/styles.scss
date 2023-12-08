@@ -6,6 +6,9 @@
     margin: 0;   
 };
 
+main {
+    height: 100%;
+}
 h1 {
         padding: 10px;
         font-size: 64px;
@@ -42,6 +45,7 @@ nav {
     width: 100%;
     justify-content: end;
     background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    // opacity: 75%;
     position: fixed;
     top: 0;
     @include media-queries.phone {
@@ -56,6 +60,7 @@ nav {
        text-decoration: none;
        font-weight: 200;
        font-size: 24px;
+        opacity: 100%;
         @include media-queries.phone {
                 padding: 20px;
                 font-size: 16px;       
@@ -74,7 +79,7 @@ nav {
     @include mixins.flex-display-direction-align(flex, row, center);
     justify-content: space-evenly;
     justify-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-top: 10px;
     padding-bottom: 20px;
     width: 100%;
@@ -86,6 +91,16 @@ nav {
                 margin-top: 75px;
         
             }
+        @include media-queries.tablet {
+            justify-content: space-between;
+            margin-top: 60px;
+                    
+        }
+        @include media-queries.laptop {
+            justify-content: space-between;
+             margin-top: 50px;
+        
+        }
 
     & .logo {
         width: 300px;
@@ -95,7 +110,19 @@ nav {
                    height: 50%;
                    padding-left:20px;
             
-                }
+            }
+            @include media-queries.tablet {
+            width: 50%;
+            height: 50%;
+            padding-left: 20px;
+        
+            }
+            @include media-queries.laptop {
+            width: 50%;
+            height: 50%;
+            padding-left: 20px;
+                        
+            }
     }
     
     
@@ -106,7 +133,15 @@ nav {
             @include media-queries.phone {
                  font-size: 24px;
             
-                }
+            }
+            @include media-queries.tablet {
+             font-size: 24px;
+            
+            }
+            @include media-queries.laptop {
+             font-size: 24px;
+        
+            }
     };
 };
     
@@ -120,19 +155,28 @@ nav {
         &__card {
             @include mixins.flex-display-direction-align(flex, row, center);
             justify-content: center;
+            align-content: center;
             flex-wrap: wrap;
             gap: 20px;
             
             
             
             &__items {
-                @include mixins.flex-display-direction-align(flex, row, center);
+                @include mixins.flex-display-direction-align(flex, column, center);
                 width: 300px;
-                justify-items: center;
+                justify-content: start;
                 gap: 10px;
                 padding: 5px;
                 font-size: 30px;
                 
+                @include media-queries.large {
+                    justify-content: center;
+                
+                    }
+                @include media-queries.xxlDesktop {
+                    justify-content: center;
+                    
+                }
             }
         }
         
