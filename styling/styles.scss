@@ -106,20 +106,20 @@ nav {
         width: 300px;
         height: 300px;
             @include media-queries.phone {
-                   width: 50%;
-                   height: 50%;
+                   width: 100%;
+                   height: 100%;
                    padding-left:20px;
             
             }
             @include media-queries.tablet {
-            width: 50%;
-            height: 50%;
+            width: 100%;
+            height: 100%;
             padding-left: 20px;
         
             }
             @include media-queries.laptop {
-            width: 50%;
-            height: 50%;
+            width: 100%;
+            height: 100%;
             padding-left: 20px;
                         
             }
@@ -168,6 +168,7 @@ nav {
                 gap: 10px;
                 padding: 5px;
                 font-size: 30px;
+                color:#0E4171;
                 
                 @include media-queries.large {
                     justify-content: center;
