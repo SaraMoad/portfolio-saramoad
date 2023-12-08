@@ -103,12 +103,14 @@ nav {
         }
 
     & .logo {
+        align-items: center;
         width: 300px;
         height: 300px;
             @include media-queries.phone {
                    width: 100%;
                    height: 100%;
-                   padding-left:20px;
+                   padding-left:10px;
+                   padding-right:10px;
             
             }
             @include media-queries.tablet {
